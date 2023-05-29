@@ -1,9 +1,18 @@
 {
-  "extends": ["next/core-web-vitals", "airbnb", "plugin:prettier/recommended"], // we must leave the "prettier" as the last element of the array, because the previous elements will lead to modulate their definitions according to the next element.
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": { "ecmaVersion": "latest", "sourceType": "module" },
-  "rules": {
-    "max-len": ["error", 140],
-    "quotes": [2, "single", { "avoidEscape": true }]
-  }
+  "extends": ["next/core-web-vitals"]
 }
+
+/*
+=======================
+Only have erros - Latter see how set up Eslint - Prettier - Husky 
+=======================
+*/
+// {
+//   "extends": ["next/core-web-vitals", "airbnb", "plugin:prettier/recommended"], // we must leave the "prettier" as the last element of the array, because the previous elements will lead to modulate their definitions according to the next element.
+//   "parser": "@typescript-eslint/parser",
+//   "parserOptions": { "ecmaVersion": "latest", "sourceType": "module" },
+//   "rules": {
+//     "max-len": ["error", 140],
+//     "quotes": [2, "single", { "avoidEscape": true }]
+//   }
+// }

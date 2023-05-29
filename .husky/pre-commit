@@ -1,8 +1,0 @@
-# https://github.com/typicode/husky
-
-#!/bin/sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-npx lint-staged
-
-# husky will pre-commit (on every commit) the `npx lint-staged` command which will check if our code follows EsLint rules (see `.eslintrc.json` file)
