@@ -1,6 +1,7 @@
 import { Character } from "../models";
 
-export const getCharacters = (): Promise<Character> => {
+// The function returns a Promise that resolves to an array of Character objects.
+export const getCharacters = (): Promise<Character[]> => {
   const url = `https://rickandmortyapi.com/api/character`;
 
   //   const urlWithId = `${url}/${id}`;
