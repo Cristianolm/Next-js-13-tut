@@ -7,7 +7,7 @@ interface Props {
 
 function Card({ data }: Props) {
   return (
-    <div className="Card">
+    <div>
       <p>Name: {data.name}</p>
       <p>Type: {data.type}</p>
       <p>Created: {data.created}</p>
@@ -16,3 +16,23 @@ function Card({ data }: Props) {
 }
 
 export default Card;
+
+/*
+import { FC } from "react";
+
+interface Props {
+  data: Character;
+}
+
+const Card: FC<Props> = ({ data }) => {
+  return (
+    <div>
+      <p>Name: {data.name}</p>
+      <p>Type: {data.type}</p>
+      <p>Created: {data.created}</p>
+    </div>
+  );
+};
+
+export default Card;
+*/
