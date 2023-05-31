@@ -1,4 +1,4 @@
-import { Card } from "@/components";
+import Card from "../components/Card/Card";
 import { getCharacters } from "./services";
 
 async function fetchCharacters() {
