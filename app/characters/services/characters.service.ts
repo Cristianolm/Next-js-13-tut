@@ -1,6 +1,6 @@
 import { Character } from "../models";
 
-// The function returns a Promise that resolves to an array of Character objects.
+// The function returns a Promise that resolves a represents the completion of an asynchronous operation of an array of Character objects.
 export const getCharacters = (): Promise<Character[]> => {
   const url = `https://rickandmortyapi.com/api/character`;
 

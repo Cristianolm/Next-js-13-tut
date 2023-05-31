@@ -10,7 +10,7 @@ async function Characters() {
   return (
     <>
       {characters.map((character) => (
-        <Card key={character.id} data={character} />
+        <Card key={character.id} data={character.location} />
       ))}
     </>
   );
