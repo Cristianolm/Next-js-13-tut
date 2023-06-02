@@ -36,7 +36,21 @@ This way we eforce that the only two personages available are the ones present i
 */
 
 export const Routes = {
-  HOME: "/",
-  CHARACTERS: "information/characters",
-  LOCATION: "information/location",
+  HOME: {
+    path: "/",
+    name: "Home",
+  },
+  CHARACTERS: {
+    path: "information/characters",
+    name: "Characters",
+  },
+  LOCATION: {
+    path: "information/locations",
+    name: "Locations",
+  },
 };
+
+export interface Route {
+  path: string;
+  name: string;
+}
