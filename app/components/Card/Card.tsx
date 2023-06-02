@@ -1,5 +1,5 @@
 import Image from "next/image";
-import cardStyles from "./Card.module.css";
+import cardStyles from "./Card.module.scss";
 
 // `Partial` will merge all "Character" and "Location" properties and make them all optional.
 // type CardData = Partial<Character & Location>;
