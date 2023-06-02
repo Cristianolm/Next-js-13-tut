@@ -6,9 +6,9 @@ import cardStyles from "./Card.module.css";
 
 // Taking into account the properties we need, which are 4, it is not worth using the "Partial".
 export interface CardData {
-  name?: string;
+  name: string;
   type?: string;
-  created?: string;
+  created: string;
   image?: string;
 }
 
@@ -24,9 +24,8 @@ function Card({ data }: Props) {
   return (
     <div className={cardStyles.Card}>
       <p>Name: {data.name}</p>
-      <p>Type: {data.type ? data.type : "No type"}</p>
-      {/* <p>Created: {data.created}</p> */}
-      <p>Created: {formatedType}</p>
+      <p>Type: {formatedType}</p>
+      <p>Created: {data.created}</p>
       {!!data.image && (
         <Image width="100" height="100" alt="Image" src={data.image} />
       )}

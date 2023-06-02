@@ -1,5 +1,6 @@
 import { Location } from "../models";
 
+// The function returns a Promise that resolves to an array of Character objects.
 export const getLocations = (): Promise<Location[]> => {
   const url = `https://rickandmortyapi.com/api/location`;
 
