@@ -1,9 +1,12 @@
 import Image from "next/image";
+import Script from "next/script";
+import { Suspense, lazy } from "react";
+import Mustachy from "../public/images/mustachy_.png";
 import { Navigator } from "./components";
 import { Routes } from "./models";
-import Mustachy from "../public/images/mustachy_.png";
 import { mustachyBlur } from "./models/mustachy.blur";
-import Script from "next/script";
+
+const Card = lazy(() => import("./components/Card/Card"));
 
 function App() {
   /*
@@ -39,13 +42,8 @@ function App() {
     />
     */
   return (
-    <>
-      <Script
-        src="https://example.com/script.js"
-        onLoad={() => {
-          console.log("Script has loaded");
-        }}
-      />
+    <Suspense fallback={<div>LOADING</div>}>
+      {/* <Card></Card>  -> This component is here just to demonstrate how to do Lazy Loading, however as it does not have the required property in the interface, the following error is being displayed `Property 'data' is missing in type '{}' but required in type 'Props' .ts`.*/}
       <div>
         <h1>Wellcome to Rick and Morty app</h1>
         <h2>What do you want to see ?</h2>
@@ -57,7 +55,7 @@ function App() {
           alt="Mustachy"
         />
       </div>
-    </>
+    </Suspense>
   );
 }
 
